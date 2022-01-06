@@ -12,7 +12,5 @@ setup(
        'numpy',
        'tensorflow',
        'matplotlib',
-       'time',
-       'os',    
     ]
 )
