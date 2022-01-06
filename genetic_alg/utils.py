@@ -1,5 +1,5 @@
 import numpy as np
-from ga import GeneticAlg
+from genetic_alg.ga import GeneticAlg
 
 def flatten_weights(model):
     '''Returns the flattened weights of a Keras model'''
