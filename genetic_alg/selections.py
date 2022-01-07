@@ -1,6 +1,6 @@
 import numpy as np
 
-def rank_selection(fitness): #Just stupid type
+def rank_selection(fitness):
     N=len(fitness)
     p=np.zeros(N)
     sorted_idx=np.argsort(fitness)
@@ -14,4 +14,10 @@ def roulette_wheel(fitness):
     p=np.zeros(N)
     for i in range(N):
         p[i]+=fitness[i]/sum
+    return p
+
+def Boltzmann_selection(fitness, T):
+    f=np.array(fitness)
+    norm=np.sum(np.exp(f/T))
+    p=np.exp(f/T)/norm
     return p
