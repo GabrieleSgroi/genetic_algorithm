@@ -118,18 +118,3 @@ class GeneticAlg():
         np.save(dir+'/saved_model/best_fitness', self.best_fitness)
         np.save(dir+'/saved_model/best_sol', self.best_solution)
         print('Model saved')
-
-def load_ga(dir, fitness_fn, mutation_fn, crossover_fn,
-                 selection_fn, keep_parents=0, callback=None):
-    '''Returns the loaded GeneticAlg instance'''
-    loaded=GeneticAlg([], fitness_fn, mutation_fn, crossover_fn,
-                 selection_fn, keep_parents=0, callback=None)
-    loaded.population=np.load(dir+'/saved_model/population.npy' ).tolist()
-    loaded.num_generations=np.load(dir+'/saved_model/generation.npy', )
-    loaded.fitness_hist=np.load(dir+'/saved_model/hist.npy').tolist()
-    loaded.best_fitness=np.load(dir+'/saved_model/best_fitness.npy')
-    loaded.best_solution=np.load(dir+'/saved_model/best_sol.npy')
-    
-    return loaded
-
-
