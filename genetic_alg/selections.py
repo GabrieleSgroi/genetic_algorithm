@@ -16,7 +16,7 @@ def roulette_wheel(fitness):
         p[i]+=fitness[i]/sum
     return p
 
-def Boltzmann_selection(fitness, T):
+def boltzmann_selection(fitness, T):
     f=np.array(fitness)
     norm=np.sum(np.exp(f/T))
     p=np.exp(f/T)/norm
