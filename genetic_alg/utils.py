@@ -26,7 +26,7 @@ def load_ga(dir, fitness_fn, mutation_fn, crossover_fn,
                  selection_fn, keep_parents=0, callback=None):
     '''Returns the loaded GeneticAlg instance'''
     loaded=GeneticAlg([], fitness_fn, mutation_fn, crossover_fn,
-                 selection_fn, keep_parents=0, callback=None)
+                 selection_fn, keep_parents=0, callback=callback)
     loaded.population=np.load(dir+'/saved_model/population.npy' ).tolist()
     loaded.num_generations=np.load(dir+'/saved_model/generation.npy', )
     loaded.fitness_hist=np.load(dir+'/saved_model/hist.npy').tolist()
