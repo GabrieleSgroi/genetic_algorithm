@@ -113,6 +113,7 @@ class GeneticAlg():
         if not os.path.exists(dir+'/saved_model'):
             os.makedirs(dir+'/saved_model')
         np.save(dir+'/saved_model/population', self.population)
+        np.save(dir+'/saved_model/fitness', self.fitness)
         np.save(dir+'/saved_model/generation', self.num_generations)
         np.save(dir+'/saved_model/hist', self.fitness_hist)
         np.save(dir+'/saved_model/best_fitness', self.best_fitness)
