@@ -107,7 +107,7 @@ class GeneticAlg():
                       plt.hist(self.fitness)
                       plt.show()
             if self.callback is not None:
-                for call in callback:
+                for call in self.callback:
                     self.call(self)
 
     def save(self, dir):
