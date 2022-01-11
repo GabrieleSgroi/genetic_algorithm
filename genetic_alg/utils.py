@@ -28,7 +28,8 @@ def load_ga(dir, fitness_fn, mutation_fn, crossover_fn,
     loaded=GeneticAlg([], fitness_fn, mutation_fn, crossover_fn,
                  selection_fn, keep_parents=0, callback=callback)
     loaded.population=np.load(dir+'/saved_model/population.npy' ).tolist()
-    loaded.num_generations=np.load(dir+'/saved_model/generation.npy', )
+    loaded.fitness=np.load(dir+'/saved_model/fitness.npy' ).tolist()
+    loaded.num_generations=np.load(dir+'/saved_model/generation.npy')
     loaded.fitness_hist=np.load(dir+'/saved_model/hist.npy').tolist()
     loaded.best_fitness=np.load(dir+'/saved_model/best_fitness.npy')
     loaded.best_solution=np.load(dir+'/saved_model/best_sol.npy')
