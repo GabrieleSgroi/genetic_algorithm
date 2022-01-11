@@ -108,7 +108,7 @@ class GeneticAlg():
                       plt.show()
             if self.callback is not None:
                 for call in self.callback:
-                    self.call(self)
+                    call(self)
 
     def save(self, dir):
         if not os.path.exists(dir+'/saved_model'):
