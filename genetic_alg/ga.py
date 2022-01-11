@@ -94,9 +94,9 @@ class GeneticAlg():
             #print log            
             if verbose:
                 if self.num_generations % log_freq==0:
-                  print("-"*65)
+                  print("-"*79)
                   print('Generation', self.num_generations)
-                  print("-"*65)
+                  print("-"*79)
                   print('Current best fitness:{},\
                           \nFitness mean:{},\nFitness std:{}.'.format(
                           self.fitness_hist[-1][1],
