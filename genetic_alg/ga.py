@@ -80,7 +80,6 @@ class GeneticAlg():
         for i in range(num_generations):
             self.generate_new_pop()    
             self.score()
-            self.num_generations+=1
             #compute time passed and expected
             now=time.time()
             extimated=((now-start)/counter)*(num_generations-counter)
@@ -91,6 +90,7 @@ class GeneticAlg():
             me=(extimated-he*3600)//60
             se=(extimated-he*3600-me*60)//1
             counter+=1
+            self.num_generations+=1
             #print log            
             if verbose:
                 if self.num_generations % log_freq==0:
