@@ -107,7 +107,8 @@ class GeneticAlg():
                       plt.hist(self.fitness)
                       plt.show()
             if self.callback is not None:
-                self.callback(self)
+                for call in callback:
+                    self.call(self)
 
     def save(self, dir):
         if not os.path.exists(dir+'/saved_model'):
