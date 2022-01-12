@@ -22,7 +22,7 @@ class GeneticAlg():
                             should return the probability for each solution to 
                             be selected as a parent.
               keep_parents: int. Parents to be kept for elitism selection.
-              callback: a callback function to be called after each generation.
+              callback: list of callback functions to be called after each generation.
                         Receives as input the GeneticAlg instance.'''
           
         self.population=initial_population
