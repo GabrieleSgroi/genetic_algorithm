@@ -17,7 +17,9 @@ def roulette_wheel(fitness):
     return p
 
 def boltzmann_selection(fitness, T):
-    f=np.array(fitness)
+    fitness=np.array(fitness)
+    #Normalize fitnesses before passing to exponential, this will avoid scale dependence
+    f=(fitness-np.mean(fitness))/(np.std(fitness)) 
     norm=np.sum(np.exp(f/T))
     p=np.exp(f/T)/norm
     return p
