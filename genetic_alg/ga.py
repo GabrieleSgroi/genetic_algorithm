@@ -109,6 +109,8 @@ class GeneticAlg():
                                                 int(he),int(me),int(se)))
                   if plot_fitness:
                       plt.hist(self.fitness)
+                      plt.xlabel('Fitness')
+                      plt.title('Population fitness histogram')
                       plt.show()
             if self.callback is not None:
                 for call in self.callback:
