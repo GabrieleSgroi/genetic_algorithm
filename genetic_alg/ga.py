@@ -71,7 +71,7 @@ class GeneticAlg():
             children.append(child)
         self.population=elites+children
          
-    def run(self, num_generations, verbose=True, log_freq=1, plot_fitness=True):
+    def run(self, num_generations, verbose=True, log_freq=1, plot_fitness=False):
         '''Run the genetic algorithm'''
         counter=1
         if self.fitness==None:
